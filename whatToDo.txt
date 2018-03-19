@@ -1,0 +1,13 @@
+What to do:
+
+1.  We need a router setup for unix systems
+    1.  We need a router software
+    2.  We need a router software installer(Pancake)
+    3.  We need a bank setup for storing money and something that can control
+      it(software) so that we can automatically deposit money to people who install
+      our software
+    4.  We need a crypto-miner injectable JS
+2.  We need to setup a way to communicate with people
+    1. We need a website with nice CSS design(Pancake)
+    2. We need a website hosting system(Pancake)
+Thats it!

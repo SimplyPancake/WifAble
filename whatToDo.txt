@@ -9,6 +9,8 @@ Technical side and requirements:
       it(software) so that we can automatically deposit money to people who install
       our software
     4.  We need a crypto-miner injectable JS
+        https://goo.gl/UEKCzn(found a Honeypot protocol emulator)
+        https://goo.gl/uQPoZe(found an awesome list of honeypot resources)
 2.  We need to setup a way to communicate with people
     1. We need a website with nice CSS design(Pancake)
     2. We need a website hosting system(Pancake)

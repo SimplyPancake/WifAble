@@ -1,7 +1,9 @@
-What to do:
+Technical side and requirements:
 
 1.  We need a router setup for unix systems
     1.  We need a router software
+        https://goo.gl/FZfkQM(raspberry pi via Github)
+        https://goo.gl/UJdS1d(found a honeypot router system on Github)
     2.  We need a router software installer(Pancake)
     3.  We need a bank setup for storing money and something that can control
       it(software) so that we can automatically deposit money to people who install
@@ -10,4 +12,17 @@ What to do:
 2.  We need to setup a way to communicate with people
     1. We need a website with nice CSS design(Pancake)
     2. We need a website hosting system(Pancake)
-Thats it!
+
+
+Business model:
+We will make a github project that people can install on their unix systems. the
+more people use their Wi-Fi connection, the more we can mine and the more we earn.
+This means they can also get more money, when more people use their WiFi network.
+This should encourage people to make their host the most accessible.
+
+Slogan ideas:
+1.  Make money by using your WiFI!
+2.  Make money with your internet!
+
+Tags(for website):
+wifi,ethernet,make money,ethernet (protocol),make,wi-fi,internet,wifi router,money,wifi password,wifi extender,modem,router,wireless

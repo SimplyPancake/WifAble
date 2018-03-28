@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # RPI3_HOTSPOTS
 Features:
@@ -39,3 +40,6 @@ Bugs:
 - work with 2.4GHz wifi(RPI3 not support 5GHz wifi) 
 # Video Demo
  [![ScreenShot](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](https://youtu.be/z6Y5Klv_nIE?t=3s)
+=======
+# WifAble
+>>>>>>> e3afbac4c2a72a88adbf6de0190eba49fc2dac8a

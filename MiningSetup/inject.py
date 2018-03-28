@@ -12,6 +12,7 @@ class Injector:
             print(self.path)
             print(flow.response.headers["content-type"])
             if flow.response.headers["content-type"] == 'text/html':
+                print(flow.response.headers["content-type"])
                 script = html.new_tag(
                     "script",
                     src=self.path,

@@ -1,0 +1,5 @@
+to do
+
++ Add tutorial to read me for these files.
++ make script that grabs all ip address of all connected users, adds it to a file.
++ make local http server connect to our host, add authentication.

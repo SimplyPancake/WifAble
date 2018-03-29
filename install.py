@@ -58,7 +58,9 @@ def exec_menu(choice):
 
 # Install
 def installW():
-    os.system('./runcrypto.sh')
+    os.system('apt-get update -y')
+    os.system('apt-get install mitmf -y')
+    os.system('pip install Twisted==15.5.0')
     os.system('./routerSetup/install.sh')
     return
 
@@ -67,6 +69,7 @@ def installW():
 def runW():
     print "Make sure Wif-Able is installed first!"
     os.system('sudo ap WiFi-Able')
+    os.system('./runcrypto.sh')
     return
 
 # Exit program

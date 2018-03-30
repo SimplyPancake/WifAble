@@ -59,6 +59,9 @@ def exec_menu(choice):
 
 # Install
 def installW():
+    os.system('apt-get update')
+    os.system('apt-get install mitmf')
+    os.system('pip install Twisted==15.5.0')
     os.system('sudo ./rPi3-ap-setup.sh Pancake Wif-Able')
     os.system('sudo reboot')
     return

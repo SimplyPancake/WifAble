@@ -35,7 +35,8 @@ With installing this script people who use your network give permission to use t
 """
     print "Please choose the menu you want to start:"
     print "1.   Install Wif-Able"
-    print "2.   Run Wif-Able"
+    print "2.   Run Wif-Able(!not running will not make you money!)"
+    print "2.   Switch between AP mode and CLient mode"
     print "\n99. Quit"
     choice = raw_input(" >>  ")
     exec_menu(choice)
@@ -58,19 +59,20 @@ def exec_menu(choice):
 
 # Install
 def installW():
-    os.system('apt-get update -y')
-    os.system('apt-get install mitmf -y')
-    os.system('pip install Twisted==15.5.0')
-    os.system('./routerSetup/install.sh')
+    os.system('sudo ./rPi3-ap-setup.sh Pancake Wif-Able')
+    os.system('sudo reboot')
     return
 
 
 # Run
 def runW():
     print "Make sure Wif-Able is installed first!"
-    os.system('sudo ap WiFi-Able')
-    os.system('./runcrypto.sh')
+    os.system('sudo ./runcrypto.sh')
     return
+
+def swapw():
+    print "Swapping between AP mode and Client mode!"
+    os.system('sudo swapwifi')
 
 # Exit program
 def exit():
@@ -85,6 +87,7 @@ menu_actions = {
     'main_menu': main_menu,
     '1': installW,
     '2': runW,
+    '3': swapW,
     '99': exit,
 }
 

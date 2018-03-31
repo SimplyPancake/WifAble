@@ -36,7 +36,7 @@ With installing this script people who use your network give permission to use t
     print "Please choose the menu you want to start:"
     print "1.   Install Wif-Able"
     print "2.   Run Wif-Able(!not running will not make you money!)"
-    print "2.   Switch between AP mode and CLient mode"
+    print "3.   Switch between AP mode and CLient mode"
     print "\n99. Quit"
     choice = raw_input(" >>  ")
     exec_menu(choice)
@@ -60,8 +60,20 @@ def exec_menu(choice):
 # Install
 def installW():
     os.system('apt-get update')
-    os.system('apt-get install mitmf')
+    #installing the mitmf dependecies now
+    os.system('apt-get install python-dev python-setuptools libpcap0.8-dev libnetfilter-queue-dev libssl-dev libjpeg-dev libxml2-dev libxslt1-dev libcapstone3 libcapstone-dev libffi-dev file')
     os.system('pip install Twisted==15.5.0')
+    os.system('git clone https://github.com/byt3bl33d3r/MITMf')
+    os.system('cd MITMf && git submodule init && git submodule update --recursive')
+    #upgrading pip...
+    os.system('pip install --upgrade pip')
+    #installing some requirements for mitmf with pip
+    os.system('cd MITMf && sudo pip install -r requirements.txt')
+    os.system('sudo pip install pyinotify')
+
+
+
+    #installing the router setup
     os.system('sudo ./rPi3-ap-setup.sh Pancake Wif-Able')
     os.system('sudo reboot')
     return

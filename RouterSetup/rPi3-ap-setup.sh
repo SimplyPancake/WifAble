@@ -7,7 +7,7 @@ if [ "$EUID" -ne 0 ]
 fi
 
 # Check that we got at least 1 param (password)
-if [[ $# -lt 1 ]]; 
+if [[ $# -lt 1 ]];
 	then echo "You need to pass a password!"
 	echo "Usage:"
 	echo "sudo $0 yourChosenPassword [apName]"
@@ -96,7 +96,7 @@ fi
 hostapd=hostapd;
 dnsmasq=dnsmasq;
 
-# We test if hostapd and dnsmasq are started 
+# We test if hostapd and dnsmasq are started
 if P=$(pgrep $hostapd) && P=$(pgrep $dnsmasq)
 then
     echo "hostapd and dnsmasq are running. Stopping AP and switching to normal wifi"

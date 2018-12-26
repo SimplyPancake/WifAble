@@ -70,7 +70,7 @@ def installW():
     print "\033[1;37;40m"
 
     os.system('sudo git clone https://github.com/mlabviet/RPI3_HOTSPOTS.git')
-    os.system('sudo /RPI3_HOTSPOTS/install.sh')
+    os.system('sudo ./RPI3_HOTSPOTS/install.sh')
     main_menu()
     return
 

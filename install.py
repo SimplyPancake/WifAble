@@ -66,19 +66,32 @@ def installW():
     # http://ozzmaker.com/add-colour-to-text-in-python/
 
     os.system('clear')
+
+    #Is WifAble already installed?
+    f = open("installed.txt","r").read()
+    if "1" is in f:
+        print "\033[0;37;41m WifAble is already installed. Installing again..."
+    pass
+
+    #Installing:
     print "\033[0;37;41m Installing RPI3_HOTSPOTS"
     print "\033[1;37;40m"
-
     os.system('sudo git clone https://github.com/mlabviet/RPI3_HOTSPOTS.git')
     os.system('sudo ./RPI3_HOTSPOTS/install.sh')
+
+    #Edit a file that will tell us if WifAble is already installed or not
+    f = open("installed.txt","w")
+    f.write("1")
+    
     main_menu()
     return
 
 
 # Run
 def runW():
-    print "Make sure Wif-Able is installed first!"
-    os.system('sudo ./runcrypto.sh')
+    print "\033[0;37;41m Make sure Wif-Able is installed first!"
+    print "\033[1;37;40m"
+    os.system('cd RPI3_HOTSPOTS && sudo ap WifAble-Free')
     return
 
 def swapW():

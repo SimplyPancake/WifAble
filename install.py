@@ -72,6 +72,8 @@ def installW():
     os.system('clear')
     os.system('sudo apt-get install hostapd bridge-utils -y')
     os.system('sudo systemctl stop hostapd')
+
+    main_menu()
     return
 
 

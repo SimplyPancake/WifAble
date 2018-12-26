@@ -4,6 +4,11 @@ Technical side and requirements:
     1.  We need a router software
         https://goo.gl/FZfkQM(raspberry pi via Github)
         https://goo.gl/UJdS1d(found a honeypot router system on Github)
+
+
+        FOUND ONE:
+        https://github.com/mlabviet/RPI3_HOTSPOTS.git
+        
     2.  We need a router software installer(Pancake)
     3.  We need a bank setup for storing money and something that can control
       it(software) so that we can automatically deposit money to people who install

@@ -62,17 +62,15 @@ def exec_menu(choice):
 # Install
 def installW():
     #Here we go!!
-    # https://www.youtube.com/watch?v=5hO4kLHZQIY
+    # https://github.com/mlabviet/RPI3_HOTSPOTS.git
     # http://ozzmaker.com/add-colour-to-text-in-python/
 
     os.system('clear')
-    print "\033[0;37;41m Updating dependencies... This might take a while..."
+    print "\033[0;37;41m Installing RPI3_HOTSPOTS"
     print "\033[1;37;40m"
-    os.system('sudo apt-get update')
-    os.system('clear')
-    os.system('sudo apt-get install hostapd bridge-utils -y')
-    os.system('sudo systemctl stop hostapd')
 
+    os.system('sudo git clone https://github.com/mlabviet/RPI3_HOTSPOTS.git')
+    os.system('sudo /RPI3_HOTSPOTS/install.sh')
     main_menu()
     return
 

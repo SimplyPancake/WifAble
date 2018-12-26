@@ -74,10 +74,10 @@ def installW():
     pass
 
     #Installing:
-    print "\033[0;37;41m Installing RPI3_HOTSPOTS"
+    print "\033[0;37;41m Installing AP..."
     print "\033[1;37;40m"
-    os.system('sudo git clone https://github.com/mlabviet/RPI3_HOTSPOTS.git')
-    os.system('sudo ./RPI3_HOTSPOTS/install.sh')
+    os.system('sudo chmod +x install_ap.sh')
+    os.system('sudo ./install_ap.sh')
 
     #Edit a file that will tell us if WifAble is already installed or not
     f = open("installed.txt","w")

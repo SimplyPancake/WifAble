@@ -63,12 +63,12 @@ def installW():
     # https://www.youtube.com/watch?v=5hO4kLHZQIY
     # http://ozzmaker.com/add-colour-to-text-in-python/
 
-    os.system(clear)
+    os.system('clear')
     print "\033[0;37;41m Updating dependencies... This might take a while..."
-    os.system(sudo apt-get update)
-    os.system(clear)
-    os.system(sudo apt-get install hostapd bridge-utils -y)
-    os.sytem(sudo systemctl stop hostapd)
+    os.system('sudo apt-get update')
+    os.system('clear')
+    os.system('sudo apt-get install hostapd bridge-utils -y')
+    os.sytem('sudo systemctl stop hostapd')
     return
 
 

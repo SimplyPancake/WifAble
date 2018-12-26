@@ -67,10 +67,11 @@ def installW():
 
     os.system('clear')
     print "\033[0;37;41m Updating dependencies... This might take a while..."
+    print "\033[1;30;40m"
     os.system('sudo apt-get update')
     os.system('clear')
     os.system('sudo apt-get install hostapd bridge-utils -y')
-    os.sytem('sudo systemctl stop hostapd')
+    os.system('sudo systemctl stop hostapd')
     return
 
 

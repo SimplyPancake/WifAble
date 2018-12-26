@@ -85,7 +85,7 @@ def runW():
     os.system('sudo ./runcrypto.sh')
     return
 
-def swapw():
+def swapW():
     print "Swapping between AP mode and Client mode!"
     os.system('sudo swapwifi')
 

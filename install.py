@@ -69,7 +69,7 @@ def installW():
 
     #Is WifAble already installed?
     f = open("installed.txt","r").read()
-    if "1" is in f:
+    if f contains "1":
         print "\033[0;37;41m WifAble is already installed. Installing again..."
     pass
 
@@ -82,7 +82,7 @@ def installW():
     #Edit a file that will tell us if WifAble is already installed or not
     f = open("installed.txt","w")
     f.write("1")
-    
+
     main_menu()
     return
 

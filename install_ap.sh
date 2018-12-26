@@ -17,7 +17,8 @@ echo " WiFi device: $WIFI"
 
 
 # update os
-apt-get update
+#DONT NEED TO UPDATE, PYTHON ALREADY DOES THAT FOR US!
+# apt-get update
 #apt-get -y upgrade
 apt-get -y install hostapd isc-dhcp-server iptables
 

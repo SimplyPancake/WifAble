@@ -69,7 +69,7 @@ def installW():
 
     #Is WifAble already installed?
     f = open("installed.txt","r").read()
-    if "1" in String(f):
+    if "1" in f:
         print "\033[0;37;41m WifAble is already installed. Installing again..."
     pass
 

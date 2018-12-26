@@ -1,7 +1,7 @@
 #!/bin/bash
 
-SSID="${1:-WiFiAPi}"
-PASSPHRASE="${2:-Raspberrypi}"
+SSID="${1:-WifAble-Free}"
+PASSPHRASE="${2:-WifAble}"
 IP_RANGE="${3:-192.168.1}"
 INC="${4:-eth0}"
 WIFI="${5:-wlan0}"

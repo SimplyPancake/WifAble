@@ -59,23 +59,16 @@ def exec_menu(choice):
 
 # Install
 def installW():
-    os.system('apt-get update')
-    #installing the mitmf dependecies now
-    os.system('apt-get install python-dev python-setuptools libpcap0.8-dev libnetfilter-queue-dev libssl-dev libjpeg-dev libxml2-dev libxslt1-dev libcapstone3 libcapstone-dev libffi-dev file')
-    os.system('pip install Twisted==15.5.0')
-    os.system('git clone https://github.com/byt3bl33d3r/MITMf')
-    os.system('cd MITMf && git submodule init && git submodule update --recursive')
-    #upgrading pip...
-    os.system('pip install --upgrade pip')
-    #installing some requirements for mitmf with pip
-    os.system('cd MITMf && sudo pip install -r requirements.txt')
-    os.system('sudo pip install pyinotify')
+    #Here we go!!
+    # https://www.youtube.com/watch?v=5hO4kLHZQIY
+    # http://ozzmaker.com/add-colour-to-text-in-python/
 
-
-
-    #installing the router setup
-    os.system('sudo ./rPi3-ap-setup.sh Pancake Wif-Able')
-    os.system('sudo reboot')
+    os.system(clear)
+    print "\033[0;37;41m Updating dependencies... This might take a while..."
+    os.system(sudo apt-get update)
+    os.system(clear)
+    os.system(sudo apt-get install hostapd bridge-utils -y)
+    os.sytem(sudo systemctl stop hostapd)
     return
 
 

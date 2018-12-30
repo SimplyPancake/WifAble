@@ -19,7 +19,7 @@ menu_actions  = {}
 def main_menu():
     os.system('clear')
 
-    print"""
+    print"""\033[0;37;41m
 
 ##      ## #### ########    ###    ########  ##       ########
 ##  ##  ##  ##  ##         ## ##   ##     ## ##       ##
@@ -38,8 +38,8 @@ With installing this script people who use your network give permission to use t
     print "Please choose the menu you want to start:"
     print "1.   Install Wif-Able"
     print "2.   Run Wif-Able(!not running will not make you money!)"
-    print "3.   Switch between AP mode and CLient mode"
     print "\n99. Quit"
+    print "\033[1;37;40m]"
     choice = raw_input(" >>  ")
     exec_menu(choice)
 
@@ -62,7 +62,7 @@ def exec_menu(choice):
 # Install
 def installW():
     #Here we go!!
-    # https://github.com/mlabviet/RPI3_HOTSPOTS.git
+    #https://github.com/PNPtutorials/PNP_RPi3_AP
     # http://ozzmaker.com/add-colour-to-text-in-python/
 
     os.system('clear')
@@ -74,10 +74,19 @@ def installW():
     pass
 
     #Installing:
-    print "\033[0;37;41m Installing AP..."
+    #red text:
+    print "\033[0;37;41m Special thanks to PNPtutorials and quangthanh010290"
+    print "\033[0;37;41m Cloning github project..."
+    #black background with white text:
     print "\033[1;37;40m"
-    os.system('sudo chmod +x install_ap.sh')
-    os.system('sudo ./install_ap.sh')
+    os.system('sudo git clone https://github.com/PNPtutorials/PNP_RPi3_AP.git')
+    os.system('clear')
+    #red text:
+    print "\033[0;37;41m Installing..."
+    #black background with white text:
+    print "\033[1;37;40m"
+    os.system('cd PNP_RPi3_AP && sudo chmod +x install.sh')
+    os.system('sudo ./PNP_RPi3_AP/install.sh')
 
     #Edit a file that will tell us if WifAble is already installed or not
     f = open("installed.txt","w")
@@ -86,17 +95,22 @@ def installW():
     main_menu()
     return
 
-
 # Run
 def runW():
-    print "\033[0;37;41m Make sure Wif-Able is installed first!"
-    print "\033[1;37;40m"
-    os.system('cd RPI3_HOTSPOTS && sudo ap WifAble-Free')
-    return
+    #Is WifAble already installed?
+    f = open("installed.txt","r").read()
+    if "0" in f:
+        print "\033[0;37;41m Wifable is not installed! Please install firstly!"
+        #WifAble is not installed :( Not running!
+        os.system('exit')
+    pass
 
-def swapW():
-    print "Swapping between AP mode and Client mode!"
-    os.system('sudo swapwifi')
+
+    print "\033[0;37;41m Running..."
+    print "\033[1;37;40m"
+    os.system('sudo chmod +x PNP_RPi3_AP/ap.sh')
+    os.system('sudo ./PNP_RPi3_AP/ap.sh Wifable-Free Wifable')
+    return
 
 # Exit program
 def exit():
@@ -111,7 +125,6 @@ menu_actions = {
     'main_menu': main_menu,
     '1': installW,
     '2': runW,
-    '3': swapW,
     '99': exit,
 }
 

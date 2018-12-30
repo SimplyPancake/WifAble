@@ -19,7 +19,7 @@ menu_actions  = {}
 def main_menu():
     os.system('clear')
 
-    print"""\033[0;37;41m
+    print"""
 
 ##      ## #### ########    ###    ########  ##       ########
 ##  ##  ##  ##  ##         ## ##   ##     ## ##       ##
@@ -39,7 +39,7 @@ With installing this script people who use your network give permission to use t
     print "1.   Install Wif-Able"
     print "2.   Run Wif-Able(!not running will not make you money!)"
     print "\n99. Quit"
-    print "\033[1;37;40m]"
+    print "\033[1;37;40m"
     choice = raw_input(" >>  ")
     exec_menu(choice)
 
@@ -67,22 +67,16 @@ def installW():
 
     os.system('clear')
 
-    #Is WifAble already installed?
-    f = open("installed.txt","r").read()
-    if "1" in f:
-        print "\033[0;37;41m WifAble is already installed. Installing again..."
-    pass
-
     #Installing:
     #red text:
-    print "\033[0;37;41m Special thanks to PNPtutorials and quangthanh010290"
-    print "\033[0;37;41m Cloning github project..."
+    print "\033[0;37;40m Special thanks to PNPtutorials and quangthanh010290"
+    print "\033[0;37;40m Cloning github project..."
     #black background with white text:
     print "\033[1;37;40m"
     os.system('sudo git clone https://github.com/PNPtutorials/PNP_RPi3_AP.git')
     os.system('clear')
     #red text:
-    print "\033[0;37;41m Installing..."
+    print "\033[0;37;40m Installing..."
     #black background with white text:
     print "\033[1;37;40m"
     os.system('cd PNP_RPi3_AP && sudo chmod +x install.sh')
@@ -97,16 +91,7 @@ def installW():
 
 # Run
 def runW():
-    #Is WifAble already installed?
-    f = open("installed.txt","r").read()
-    if "0" in f:
-        print "\033[0;37;41m Wifable is not installed! Please install firstly!"
-        #WifAble is not installed :( Not running!
-        os.system('exit')
-    pass
-
-
-    print "\033[0;37;41m Running..."
+    print "\033[0;37;40m Running..."
     print "\033[1;37;40m"
     os.system('sudo chmod +x PNP_RPi3_AP/ap.sh')
     os.system('sudo ./PNP_RPi3_AP/ap.sh Wifable-Free Wifable')

@@ -68,16 +68,12 @@ def installW():
     os.system('clear')
 
     #Installing:
-    #red text:
-    print "\033[0;37;40m Special thanks to PNPtutorials and quangthanh010290"
-    print "\033[0;37;40m Cloning github project..."
-    #black background with white text:
+    print "\033[1;37;40m Special thanks to PNPtutorials and quangthanh010290"
+    print "\033[1;37;40m Cloning github project..."
     print "\033[1;37;40m"
     os.system('sudo git clone https://github.com/PNPtutorials/PNP_RPi3_AP.git')
     os.system('clear')
-    #red text:
-    print "\033[0;37;40m Installing..."
-    #black background with white text:
+    print "\033[1;37;40m Installing..."
     print "\033[1;37;40m"
     os.system('cd PNP_RPi3_AP && sudo chmod +x install.sh')
     os.system('sudo ./PNP_RPi3_AP/install.sh')
@@ -91,7 +87,7 @@ def installW():
 
 # Run
 def runW():
-    print "\033[0;37;40m Running..."
+    print "\033[1;37;40m Running..."
     print "\033[1;37;40m"
     os.system('sudo chmod +x PNP_RPi3_AP/ap.sh')
     os.system('sudo ./PNP_RPi3_AP/ap.sh Wifable-Free Wifable')
